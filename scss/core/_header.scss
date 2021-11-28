@@ -1,0 +1,268 @@
+.header{
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background: #132539;
+    z-index: 500;
+	transform: translateY(-100%);
+	transition: $t;
+	&.active{
+		transition: $t;
+		opacity: 1;
+		transform: translateY(0%);
+	}
+	.container{
+		ul{
+			display: flex;
+			height: 100%;
+			width: 100%;
+			align-items: center;
+			justify-content: space-between;
+			a{
+				font-size: 1.4rem;
+				font-family: $font-ar;
+				color: black;
+				transition: $t;
+				text-transform: uppercase;
+				img{
+					margin-top: 8px;
+					height: 30px;
+					transition: $t;
+					&:hover{
+						opacity: 0.7;
+					}
+				}
+				&:hover{
+					color: $primary-color;
+				}
+			}
+		}
+	}
+	.container-fluid{
+		display: none;
+	}
+}
+@include xs{
+    .header{
+        display: block;
+        height: 70px;
+	    position: fixed;
+        background: $blue-cl;
+        z-index: 500;
+        top: 0;
+        right: 0;
+        left: 0;
+		opacity: 1;
+		transform: none;
+		
+		// padding: 50px 0;
+		.container{
+			display: none;
+		}
+        .container-fluid{
+            position: relative;
+            display: flex;
+			justify-content: space-between;
+			display: block;
+			z-index: 400;
+			height: 100px;
+            // align-items: center;
+            img{
+                position: absolute;
+                right: 6%;
+				height: 30px;
+                // bottom: 2px;
+            }
+            .desc{
+                position: absolute;
+                left: 60px;
+                bottom: 38px;
+                font-size: 2rem;
+                color: $white-color;
+                opacity: 0.7;
+            }
+        }
+        &-hamburger {
+            display: block;
+			width: 30px;
+			height: 20px;
+			position: relative;
+            bottom: -25px;
+			span {
+				width: 100%;
+				height: 2px;
+				background-color: $primary-color;
+				display: block;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&:before,
+			&:after {
+				content: ' ';
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				background-color: $primary-color;
+				left: 0;
+			}
+			&:before {
+				top: 0;
+			}
+			&:after {
+				bottom: 0;
+			}
+			&.active{
+				&::before{
+					transform: rotate(45deg) translate(9px ,4px);
+					@include transition($t);
+				}
+				span{
+					opacity: 0;
+					@include transition($t);
+				}
+				&::after{
+					transform: rotate(-45deg) translate(9px ,-4px);
+					@include transition($t);
+					bottom: 0;
+				}
+			}
+    }   }
+}
+
+.header-menu{
+    opacity: 0;
+    // position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background: #132539;
+    z-index: 500;
+	transform: translateY(-100%);
+	transition: $t;
+	&.active{
+		transition: $t;
+		opacity: 1;
+		transform: translateY(0%);
+	}
+	.container{
+		ul{
+			display: flex;
+			height: 100%;
+			width: 100%;
+			align-items: center;
+			justify-content: space-between;
+			a{
+				font-size: 1.4rem;
+				font-family: $font-ar;
+				color: $white-a;
+				transition: $t;
+				text-transform: uppercase;
+				img{
+					margin-top: 8px;
+					height: 30px;
+					transition: $t;
+					&:hover{
+						opacity: 0.7;
+					}
+				}
+				&:hover{
+					color: $primary-color;
+				}
+			}
+		}
+	}
+	.container-fluid{
+		display: none;
+	}
+}
+@include xs{
+    .header-menu{
+        display: block;
+        height: 70px;
+        background: $blue-cl;
+        z-index: 500;
+        top: 0;
+        right: 0;
+        left: 0;
+		opacity: 1;
+		transform: none;
+		
+		// padding: 50px 0;
+		.container{
+			display: none;
+		}
+        .container-fluid{
+            position: relative;
+            display: flex;
+			justify-content: space-between;
+			display: block;
+			z-index: 400;
+			height: 100px;
+            // align-items: center;
+            img{
+                position: absolute;
+                right: 6%;
+				height: 30px;
+                // bottom: 2px;
+            }
+            .desc{
+                position: absolute;
+                left: 60px;
+                bottom: 38px;
+                font-size: 2rem;
+                color: $white-color;
+                opacity: 0.7;
+            }
+			.header-hamburger {
+				display: block;
+				width: 30px;
+				height: 20px;
+				position: relative;
+				bottom: -25px;
+				span {
+					width: 100%;
+					height: 2px;
+					background-color: $primary-color;
+					display: block;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				&:before,
+				&:after {
+					content: ' ';
+					position: absolute;
+					width: 100%;
+					height: 2px;
+					background-color: $primary-color;
+					left: 0;
+				}
+				&:before {
+					top: 0;
+				}
+				&:after {
+					bottom: 0;
+				}
+				&.active{
+					&::before{
+						transform: rotate(45deg) translate(9px ,4px);
+						@include transition($t);
+					}
+					span{
+						opacity: 0;
+						@include transition($t);
+					}
+					&::after{
+						transform: rotate(-45deg) translate(9px ,-4px);
+						@include transition($t);
+						bottom: 0;
+					}
+				}
+			}   
+        }
+        
+	}
+}

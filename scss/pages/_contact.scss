@@ -1,0 +1,64 @@
+.slider{
+    .container{
+        position: absolute;
+        @include mid;
+        .btn{
+            margin-left: 85.5%;
+            color: $white-color;
+            background: black;
+            padding: 10px 30px;
+            border: 1px solid white;
+            transition: $t;
+            &:hover{
+                color: black;
+                background: white;
+                transition: $t;
+            }
+        }
+        .contact-item{
+            display: flex;
+            justify-content: space-around;
+            .contact-list{
+                input{
+                    background: transparent;
+                    border-bottom: 1px solid #937e4c;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    margin-bottom: 20px;
+                    width: 100%;
+                    color: #fff;
+                }
+                h3{
+                    font-size: 1.2rem;
+                    color: $primary-color;
+                    margin-bottom: 20px;
+                    letter-spacing: 1.5px;
+                    font-family: $font-e;
+                }
+                p{
+                    font-size: 1.2rem;
+                    color: $white-color;
+                    margin-bottom: 20px;
+                }
+                .contact-top{
+                    display: flex;
+                    .info{
+                        margin-right: 66px;
+                    }
+                }
+                textarea{
+                    width: 100%;
+                    height: 110px;
+                    background: transparent;
+                    border: 1px solid $primary-color;
+                    line-height: 32px;
+                    padding: 0;
+                    overflow: hidden;
+                    color: #fff;
+
+                }
+            }
+        }
+    }
+}

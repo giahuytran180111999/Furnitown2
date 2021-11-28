@@ -1,0 +1,40 @@
+
+@font-face {
+    font-family: 'Arial Bold';
+    src: url('Arial-BoldMT.woff2') format('woff2'),
+        url('Arial-BoldMT.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+
+@font-face {
+    font-family: 'Arial';
+    src: url('Arial-Black.woff2') format('woff2'),
+        url('Arial-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Elle Baskerville';
+    src: url('ElleBaskerville-Italic.woff2') format('woff2'),
+        url('ElleBaskerville-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Elle Baskerville';
+    src: url('ElleBaskerville-Bold.woff2') format('woff2'),
+        url('ElleBaskerville-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+
+

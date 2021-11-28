@@ -1,0 +1,193 @@
+.product{
+    padding-top: var(--ptop);
+    &-more{
+        a{
+            img{
+                transform: rotate(90deg);
+                animation: scroll-down 1s linear infinite alternate;
+                padding-bottom: 10px;
+            }
+            p{
+                color: $black-p;
+                font-family: $font-ab;
+                transition: $t;
+                font-size: 1.4rem;
+                &:hover{
+                    color: $primary-color;
+                    transition: $t;
+                }
+            }
+           text-align: center;
+           padding-bottom: 80px;
+        }
+    }
+    &-main{
+        padding-bottom: 110px;
+        &.pd-none{
+            padding-bottom: none;
+        }
+    }
+    &-list{
+        display: flex;
+        justify-content: space-between;
+        gap: 0 20px;
+        padding-top: 50px;
+        padding-bottom: 130px;
+        border-bottom: 1px solid rgb(207, 199, 199);
+        &.product-fix{
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+        &.bottom-none{
+            border-bottom: none;
+        }
+    }
+    &-item{
+        padding-right: 20px;
+        border-right: 1px solid rgb(207, 199, 199);
+        height: 435px;
+        .img{
+            overflow: hidden;
+            display: inline-flex;
+            img{
+                transition: $t;
+                &:hover{
+                    transform: scale(1.2);
+                    transition: $t;
+                }
+            }
+        }
+        h4{
+            padding: 30px 0;
+            &.h4{
+                padding-top: 20px;
+                padding-bottom: 0;
+            }
+        }
+        span{
+            transform: translateY(30px);
+            color: gray;
+        }
+        a{
+            transform: translateY(20px);
+            color: $black-p;
+            &.a{
+                transform: translateY(0px) !important;
+            }
+            img{
+                transition: $t;
+            }
+            &:hover{
+                transition: $t;
+                img{
+                    transform: translateX(-10px);
+                    transition: $t;
+                }
+            }
+            span{
+                color: $black-p;
+                transition: $t;
+                &:hover{
+                    color: $primary-color;
+                    transition: $t;
+                }
+            }
+        }
+        &.border-none{
+            border-right: none;
+            padding-right: 0;
+        }
+    }
+    &-detail{
+        .product-all{
+            a{
+                font-family: $font-ab;
+                font-size: 12px;
+                color: $black-color;
+                transition: $t;
+                &:hover{
+                    color: $primary-color;
+                    transition: $t;
+                    margin-right: 10px;
+                }
+            }
+            display: flex;
+            width: 10%;
+            gap: 0 10px;
+            align-items: center;
+            margin-left: 32px;
+        }
+        display: flex;
+        align-items: center;
+        .number{
+            p{
+                color: #c48b2c;
+                font-size: 90px;
+                font-family: $font-e;
+                margin-right: 10px;
+            }
+        }
+        .product-content{
+            h3{
+                font-size: 18px !important;
+                font-weight: normal;
+                font-family: $font-ar;
+            }
+            p{
+                font-family: $font-ar;
+                line-height: 1 !important;
+                margin-bottom: 12px;
+                width: 60%;
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    @include xs{
+        padding-top: 30px ;
+        padding-bottom: 110px;
+
+        &-item{
+            height: 350px;
+            .h4{
+                padding-top: 50px !important;
+            }
+        }
+        &-list{
+            padding-bottom: 0px;
+           
+        }
+        &-main{
+            padding-top: 10px;
+            padding-bottom: 20px;
+            .product-detail{
+                .product-content{
+                    p{
+                        margin-left: 0;
+                        width: 100%;
+                    }
+                }
+                .product-all{
+                    display: block;
+                    margin-left: 10px;
+                    width: 33%;
+                    a{
+                        font-size: 1rem;
+                        line-height: 2;
+                    }
+                }
+                .number{
+                    p{
+                        font-size: 9rem;
+                    }
+                }
+            }
+        }
+        &-content{
+            h3{
+                font-size: 1.4rem !important;
+            }
+        }
+    }
+}
+

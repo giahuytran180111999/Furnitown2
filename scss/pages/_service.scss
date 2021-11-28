@@ -1,0 +1,61 @@
+.service{
+    padding-bottom: 70px;
+    .container{
+        .titleh3{
+            font-family: $font-e;
+            font-size: 2.6rem;
+            font-weight: normal !important;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 30px;
+        }
+        .des{
+            width:50% ;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.2rem;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+        h1{
+            text-align: center;
+            font-size: 3.2rem;
+            align-items: center;
+            padding: 50px 0;
+            font-family: $font-e;
+            color: $black-p !important;
+        }
+        h3{
+            font-size: 2.6rem;
+            font-family: $font-e;
+            padding: 50px 0;
+        }
+        .service-desc{
+            display: flex;
+            border-bottom: 1px solid black ;
+            padding-bottom: 100px;
+            p{
+                font-size: 1.2rem;
+                width: 50%;
+                margin-right: 100px;
+                text-align: left;
+            }
+            .btn-wrap{
+                .btn{
+                    border: 1px solid black;
+                    padding: 15px;
+                    border-radius: 4px;
+                    background: white;
+                    color: $black-btn;
+                    margin-left: 20px;
+                    transition: $t;
+                    &:hover{
+                        transition: $t;
+                        color: $white-a;
+                        background: black;
+                    }
+                }
+            }
+        }
+    }
+}

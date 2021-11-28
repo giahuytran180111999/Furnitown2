@@ -1,0 +1,138 @@
+.detail-header{
+    padding: 20px;
+    border-bottom: 1px solid #d7d7d7;
+    .container-fluid{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .detail-back{
+            display: flex;
+            gap: 0 20px;
+            a{
+                color: $black-color;
+                font-weight: bold;
+                transition: $t;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+        .detail-wrap{
+            display: inline-flex;
+            gap: 0 15px;
+            ul{
+                display: inline-flex;
+                gap: 0 20px;
+                a{
+                    color: $black-color;
+                    font-weight: bold;
+                    transition: $t;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.detail{
+    position: relative;
+    margin-bottom: 30px;
+    &::before{
+        position: absolute;
+        content: "";
+        background: #d7d7d7;
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    .row{
+        display: flex;
+        height: 680px;
+        .content{
+            margin-left: 50px;
+            padding-top: 50px;
+            &-desc{
+                margin-top: 30px;
+                h4{
+                    margin-bottom: 30px;
+                }
+            }
+            h3{
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
+            .content-list{
+                display: grid;
+                grid-template-columns: repeat(2, 6fr);
+                gap: 30px 0;
+                .titleh3{
+                    color: $primary-color;
+                }
+                p{
+                    font-size: 1.4rem;
+                    font-family: $font-ab;
+
+                }
+            }
+        }
+       .carousel{
+            width: 150%;
+            position: relative;
+            border-right: 1px solid #d7d7d7;
+            padding-right: 50px;
+            padding-top: 50px;
+            .carousel-cell{
+                width: 100%;
+                img{
+                    
+                    height: 520px;
+                   
+                }           
+            }
+            .flickity-prev-next-button {
+                position: absolute;
+                bottom: 5%;
+                left: 0;
+                border-radius: 0;
+                transform: none;
+                transition: $t;
+                &:hover{
+                    &.next,&.previous{
+                        background: #d7d7d7;
+                        transition: $t;
+                    }
+                }
+                &.next{
+                    width: 50px;
+                    left:14%;
+                    height: 50px;
+                    border-radius: 50%;
+                    border: solid black;
+                    background: white;
+                }
+                &.previous{
+                    height: 50px;
+                    border: solid black;
+                    border-radius: 50%;
+                    width: 50px;
+                    background: white;
+                }
+            }
+       }
+    }
+}
+
+.detail-other{
+    padding: 70px 0;
+    h3{
+        font-size: 25px;
+        text-align: center;
+        font-weight: 200 !important;
+    }
+    .product-list{
+        border-bottom: 1px solid #d7d7d7;
+    }
+}

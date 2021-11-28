@@ -1,0 +1,148 @@
+.footer{
+        height: 1000px;
+        background: $blue-cl;
+        margin-top: -400px;
+        z-index: 1;
+        &-all{
+            height: 530px;
+            margin-top: 0;
+            .contact{
+                top: 12rem !important;
+            }
+        }
+    .container{
+        position: relative;
+        .poet{
+            position: absolute;
+            text-align: right;
+            top: 24.7rem;
+            right: 2%;
+            max-width: 378px;
+            z-index: 1;
+            color: $white-color;
+            font-family: $font-e ;
+            font-style: italic;
+            font-size: 1.8rem;
+            line-height: 4rem;
+            span{
+                color: $primary-color;
+            }
+        }
+        .pencil{
+            position: absolute;
+            top: 34rem;
+            right: -0%;
+            z-index: 0;
+            width: 15%;
+        }
+        .contact{
+            z-index: 2;
+            position: absolute;
+            top: 55rem;
+            width: 97%;
+            img{
+               margin-left: 45%;
+            }
+            ::before{
+                content: "";
+                position: absolute;
+                background: $primary-color;
+                height: 2px;
+                width: 45%;
+                top: 10%;
+                left: 0;
+            }
+            ::after{
+                content: "";
+                position: absolute;
+                background: $primary-color;
+                height: 2px;
+                width: 45%;
+                top: 10%;
+                right: 0;
+            }
+            &__info{
+                margin: 30px;
+                text-align: center;
+                line-height: 2;
+                text-transform: uppercase;
+                color: $white-color;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.4rem;
+                line-height: 2.6rem;
+                letter-spacing: 0.5;
+            }
+            .contact__backtop{
+                font-family: Arial, Helvetica, sans-serif;
+                color: #aaaaaa;
+                font-size: 10px;
+                position: absolute;
+                transform: rotate(90deg);
+                right: -5rem;
+                bottom: -100px;
+                cursor: pointer;
+                transition: $t;
+                line-height: 2.6rem;
+                letter-spacing: 2;
+                &:hover{
+                    color: $primary-color;
+                }
+                &::before{
+                    display: none;
+                }
+                &::after{
+                   right: 110%; 
+                   top: 50%;
+                   width:100%;
+                }
+            }
+
+        }
+    }
+    @include xs{
+        margin-top: -140px;
+        .container{
+            .poet{
+                right: 13%;
+                font-size: 1.4rem;
+                max-width: 300px;
+            }
+            .pencil{
+                top: 42rem;
+                right: 35%;
+                width: 28%;
+            }
+            .contact{
+                img{
+                    margin-left: 37%;
+                }
+                ::before{
+                    content: "";
+                    position: absolute;
+                    background: $primary-color;
+                    height: 2px;
+                    width: 35%;
+                    top: 10%;
+                    left: 0;
+                }
+                ::after{
+                    content: "";
+                    position: absolute;
+                    background: $primary-color;
+                    height: 2px;
+                    width: 35%;
+                    top: 10%;
+                    right: 4%;
+                }
+                &__info{
+                    font-size: 1.1rem;
+                    margin-right: 45px;
+                }
+                .contact__backtop{
+                    right: 0rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
